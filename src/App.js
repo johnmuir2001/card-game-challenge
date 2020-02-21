@@ -10,7 +10,6 @@ import Waluigi from "./images/waluigi.jpg";
 import Wario from "./images/Wario.jpg";
 import Yoshi from "./images/yoshi.jpg";
 import Reset from "./images/reset.png";
-import loseReset from "./images/looseRestart.png";
 
 class App extends Component {
   state = {
@@ -35,9 +34,10 @@ class App extends Component {
     ],
     firstFlip: null,
     secondFlip: null,
-    moves: 2,
+    moves: 7,
     count: 1,
-    lose: true
+    lose: true,
+    win: false
   };
 
   flipHandler = index => {
@@ -67,6 +67,7 @@ class App extends Component {
       if (cards[firstFlip].image === cards[secondFlip].image) {
         console.log("its a match");
         this.setState({moves: this.state.moves + 1 })
+        this.winningLogic();
           this.setState({ firstFlip: null, secondFlip: null });
       } else if (cards[firstFlip].image !== cards[secondFlip].image) {
         let newCards = this.state.cards;
@@ -78,21 +79,18 @@ class App extends Component {
         
       }
     }
-    this.winningLogic();
   }
 
   winningLogic = () => {
-    //write a function that determines a winner (every card is turned over)
-    //there's an array method called -every- which you might want to look up.
-    //you then need to decided where the best place to call this method is.
-  };
-
+    let cardFlip = this.state.cards
+    this.setState({win: cardFlip.every(card => card.flipped === true)})
+  }
   restart = () => {
     let card = [...this.state.cards]
     for(let i=0; i< card.length; i++){
       card[i].flipped = false
     }
-      this.setState({cards: card, lose: !this.state.lose})
+    this.setState({cards: card, lose: true, win: false, moves: 7})
   }
 
   render() {
@@ -109,8 +107,13 @@ class App extends Component {
         <div className="board">
 
           <div className={this.state.lose ? "lose hide" : "lose"}>
-            <h2>Your Memory Sucks</h2>
-            <img onClick={this.restart} className="loseReset" src={loseReset} alt="restart"></img>
+            <h2 className="loseTitle">Your Memory Sucks</h2>
+            <img onClick={this.restart} className="loseReset" src={Reset} alt="restart"></img>
+          </div>
+          
+          <div className={this.state.win ? "win" : "win hide"}>
+            <h2 className="winTitle">Nice one, YOU WON!</h2>
+            <img className="winReset" onClick={this.restart} src={Reset} alt="restart"></img>
           </div>
 
           {this.state.cards.map((card, index) => {
