@@ -14,32 +14,6 @@
   padding: 20px 0px;
   box-shadow: 6px 6px 25px 0px rgb(44, 44, 44);
 }
-@media only screen and (max-width: 800px) {
-  .board {
-    width: 770px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #656465;
-    border-radius: 5px;
-    padding: 20px 0px;
-    box-shadow: 6px 6px 25px 0px rgb(44, 44, 44);
-    transform: scale(0.7)
-  }
-}
-@media only screen and (max-height: 800px) {
-  .board {
-    width: 770px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #656465;
-    border-radius: 5px;
-    padding: 20px 0px;
-    box-shadow: 6px 6px 25px 0px rgb(44, 44, 44);
-    transform: scale(0.7)
-  }
-}
 .statsWrap{
   display: flex;
   flex-direction: column;
@@ -73,7 +47,7 @@ h3{
   top: 174px;
   z-index: 3;
 }
-h2{
+.loseTitle{
   position: absolute;
   font-family: "Finger Paint";
   font-size: 80px;
@@ -87,11 +61,42 @@ small{
 }
 .loseReset{
   position: absolute;
+  height: 250px;
   z-index: 3;
-  left: 230px;
+  left: 270px;
   top: 350px;
 }
 
 .hide{
   display: none;
+}
+
+.win{
+  position: absolute;
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 5px;
+  height: 696px;
+  width: 770px;
+  left: 0px;
+  top: 174px;
+  z-index: 3;
+}
+.winTitle{
+  position: absolute;
+  font-family: "Finger Paint";
+  width: 500px;
+  font-size: 90px;
+  color: rgb(0, 255, 0);
+  opacity: 1;
+  text-align: center;
+  z-index: 3;
+  left: 130px;
+}
+.winReset{
+  position: absolute;
+  height: 250px;
+  z-index: 3;
+  left: 270px;
+  top: 350px;
 }
