@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/card-game-challenge/static/css/main.4e28534e.chunk.css",
+    "main.js": "/card-game-challenge/static/js/main.fb4d9e4e.chunk.js",
+    "main.js.map": "/card-game-challenge/static/js/main.fb4d9e4e.chunk.js.map",
+    "runtime-main.js": "/card-game-challenge/static/js/runtime-main.13214409.js",
+    "runtime-main.js.map": "/card-game-challenge/static/js/runtime-main.13214409.js.map",
+    "static/js/2.f7e64fa1.chunk.js": "/card-game-challenge/static/js/2.f7e64fa1.chunk.js",
+    "static/js/2.f7e64fa1.chunk.js.map": "/card-game-challenge/static/js/2.f7e64fa1.chunk.js.map",
+    "index.html": "/card-game-challenge/index.html",
+    "precache-manifest.0d4a4006620f86cc1d28bfc03c2ca925.js": "/card-game-challenge/precache-manifest.0d4a4006620f86cc1d28bfc03c2ca925.js",
+    "service-worker.js": "/card-game-challenge/service-worker.js",
+    "static/css/main.4e28534e.chunk.css.map": "/card-game-challenge/static/css/main.4e28534e.chunk.css.map",
+    "static/js/2.f7e64fa1.chunk.js.LICENSE.txt": "/card-game-challenge/static/js/2.f7e64fa1.chunk.js.LICENSE.txt",
+    "static/media/Wario.jpg": "/card-game-challenge/static/media/Wario.903bbc4c.jpg",
+    "static/media/babymario.jpg": "/card-game-challenge/static/media/babymario.2a72b74a.jpg",
+    "static/media/bowser.jpg": "/card-game-challenge/static/media/bowser.69f44bd2.jpg",
+    "static/media/luigi.jpg": "/card-game-challenge/static/media/luigi.38c6178d.jpg",
+    "static/media/matt.jpg": "/card-game-challenge/static/media/matt.a48bc99d.jpg",
+    "static/media/reset.png": "/card-game-challenge/static/media/reset.157a022a.png",
+    "static/media/waluigi.jpg": "/card-game-challenge/static/media/waluigi.9225e893.jpg",
+    "static/media/yoshi.jpg": "/card-game-challenge/static/media/yoshi.66fafc58.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.13214409.js",
+    "static/js/2.f7e64fa1.chunk.js",
+    "static/css/main.4e28534e.chunk.css",
+    "static/js/main.fb4d9e4e.chunk.js"
+  ]
+}
