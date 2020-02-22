@@ -37,7 +37,8 @@ class App extends Component {
     moves: 7,
     count: 1,
     lose: true,
-    win: false
+    win: false,
+    match: "Good Luck..."
   };
 
   flipHandler = index => {
@@ -65,8 +66,7 @@ class App extends Component {
     const { firstFlip, secondFlip, cards } = this.state;
     if (firstFlip != null && secondFlip != null) {
       if (cards[firstFlip].image === cards[secondFlip].image) {
-        console.log("its a match");
-        this.setState({moves: this.state.moves + 1 })
+        this.setState({moves: this.state.moves + 1, match: "It's a Match" })
         this.winningLogic();
           this.setState({ firstFlip: null, secondFlip: null });
       } else if (cards[firstFlip].image !== cards[secondFlip].image) {
@@ -74,7 +74,7 @@ class App extends Component {
         newCards[firstFlip].flipped = false;
         newCards[secondFlip].flipped = false;
         setTimeout(() => {
-          this.setState({ cards: newCards, firstFlip: null, secondFlip: null });
+          this.setState({ cards: newCards, firstFlip: null, secondFlip: null, match: "No Match this time"});
         }, 1000);
         
       }
@@ -98,6 +98,7 @@ class App extends Component {
       <div className="container">
         <div className="statsWrap">
           <h1>Memory Game</h1>
+          <h3 className="ux">{this.state.match}</h3>
           <div className="stats">
             <h3>{this.state.moves} Move(s) left</h3>
             <h3>0 mins 0 secs</h3>
